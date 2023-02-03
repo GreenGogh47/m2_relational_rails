@@ -19,6 +19,7 @@ RSpec.describe 'User Story 2, Parent Show ' do
         expect(page).to have_content(@library_1.free_parking)
 
         visit "/libraries/#{@library_2.id}"
+        save_and_open_page
         expect(page).to have_content(@library_2.name)
         expect(page).to have_content(@library_2.study_rooms)
         expect(page).to have_content(@library_2.free_parking)

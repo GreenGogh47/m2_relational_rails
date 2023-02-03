@@ -1,4 +1,6 @@
 class LibrariesController < ApplicationController
+  # has_many :rare_books
+
   def index
     @libraries = Library.all
   end
