@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'User Story 2, Parent Show ' do
+RSpec.describe 'User Story 1, Parent Index' do
   before(:each) do
     @library_1 = Library.create!(name: "Hogwarts",
                                 study_rooms: 321,
@@ -11,17 +11,11 @@ RSpec.describe 'User Story 2, Parent Show ' do
   end
   
   describe "As a visitor" do
-    describe "when I visit /libraries/:id" do
-      it "shows that library and all with the attributes" do
-        visit "/libraries/#{@library_1.id}"
+    describe "when I visit /libraries" do
+      it "shows the name of each library" do
+        visit "/libraries"
         expect(page).to have_content(@library_1.name)
-        expect(page).to have_content(@library_1.study_rooms)
-        expect(page).to have_content(@library_1.free_parking)
-
-        visit "/libraries/#{@library_2.id}"
         expect(page).to have_content(@library_2.name)
-        expect(page).to have_content(@library_2.study_rooms)
-        expect(page).to have_content(@library_2.free_parking)
       end
     end
   end
