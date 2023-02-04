@@ -1,0 +1,9 @@
+<h1>All of the Books</h1>
+
+<% @rare_books.each do |rare_book| %>
+  <b>Title: <%= rare_book.title %></b>
+  <p>Cost: <%= rare_book.cost %></p>
+  <p>On Display? <%= rare_book.on_display %></p>
+  <p>Located at: <%= rare_book.libraries_id %></p>
+  <br>
+<% end %>
