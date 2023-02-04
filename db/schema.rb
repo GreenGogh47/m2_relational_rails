@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_03_154840) do
+ActiveRecord::Schema.define(version: 2023_02_03_210610) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "libraries", force: :cascade do |t|
     t.string "name"
-    t.string "address"
     t.integer "study_rooms"
     t.boolean "free_parking"
     t.datetime "created_at", null: false
@@ -25,7 +24,6 @@ ActiveRecord::Schema.define(version: 2023_02_03_154840) do
   end
 
   create_table "rare_books", force: :cascade do |t|
-    t.bigint "library_id_id"
     t.string "title"
     t.integer "cost"
     t.boolean "on_display"
@@ -33,7 +31,6 @@ ActiveRecord::Schema.define(version: 2023_02_03_154840) do
     t.datetime "updated_at", null: false
     t.bigint "libraries_id"
     t.index ["libraries_id"], name: "index_rare_books_on_libraries_id"
-    t.index ["library_id_id"], name: "index_rare_books_on_library_id_id"
   end
 
   add_foreign_key "rare_books", "libraries", column: "libraries_id"

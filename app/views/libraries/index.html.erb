@@ -1,8 +1,6 @@
 <h1>All of the Libraries</h1>
 
 <% @libraries.each do |library| %>
-  <b>Name: <%= library.name %></b>
-  <p>Total Study Rooms: <%= library.study_rooms %></p>
-  <p>Is there free parking? <%= library.free_parking %></p>
+  <b><%= link_to library.name, "/libraries/#{library.id}" %></b>
   <br>
 <% end %>
