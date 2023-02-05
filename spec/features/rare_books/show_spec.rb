@@ -8,7 +8,7 @@ RSpec.describe 'User Story 4, Child Show ' do
     @library_2 = Library.create!(name: "Middle Earth Public Library",
                                 study_rooms: 543,
                                 free_parking: true)
-    # require 'pry'; binding.pry
+
     @rare_book_1 = @library_1.rare_books.create!(title: "Witches and Sh-tuff",
                                     cost: 2345,
                                     on_display: false)
@@ -25,5 +25,9 @@ RSpec.describe 'User Story 4, Child Show ' do
         expect(page).to have_content(@rare_book_2.title)
       end
     end
+  end
+
+  xdescribe "#show" do
+    it ''
   end
 end
