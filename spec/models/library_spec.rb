@@ -1,5 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe Library, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before(:each) do
+    @library_1 = Library.create!(name: "Hogwarts",
+                                study_rooms: 321,
+                                free_parking: false)
+    @library_2 = Library.create!(name: "Middle Earth Public Library",
+                                study_rooms: 543,
+                                free_parking: true)
+  end
+
+  xdescribe 'relationship' do
+    it {should have_many :rare_books}
+  end
 end
