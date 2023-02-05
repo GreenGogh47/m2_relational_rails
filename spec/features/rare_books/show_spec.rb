@@ -21,7 +21,6 @@ RSpec.describe 'User Story 4, Child Show ' do
     describe "when I visit /rare_books/:id" do
       it "I see the rare_book with that ID with elements" do
         visit "/rare_books"
-        save_and_open_page
         expect(page).to have_content(@rare_book_1.title)
         expect(page).to have_content(@rare_book_2.title)
       end

@@ -4,7 +4,6 @@
   <b><%= link_to rare_book.title, "rare_books/#{rare_book.id}" %></b>
   <p>Cost: <%= rare_book.cost %></p>
   <p>On Display? <%= rare_book.on_display %></p>
-  <% require 'pry'; binding.pry %>
   <p>Located at: <%= rare_book.library.name %></p>
   <br>
 <% end %>
