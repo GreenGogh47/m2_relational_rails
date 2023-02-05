@@ -1,3 +1,7 @@
 class RareBook < ApplicationRecord
-    belongs_to :libraries
+    belongs_to :library
+
+    def index
+        @rare_books = RareBook.all
+    end
 end
