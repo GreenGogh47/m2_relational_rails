@@ -9,14 +9,14 @@ RSpec.describe 'User Story 3, Child Index' do
                                 study_rooms: 543,
                                 free_parking: true)
     
-    @rare_book_1 = RareBook.create!(title: "Witches and Sh-tuff",
+    @rare_book_1 = @library_1.rare_books.create!(title: "Witches and Sh-tuff",
                                     cost: 2345,
                                     on_display: false,
-                                    libraries_id: 1)
-    @rare_book_2 = RareBook.create!(title: "Shaving Hobbit Feet",
+                                    library_id: 1)
+    @rare_book_2 = @library_2.rare_books.create!(title: "Shaving Hobbit Feet",
                                     cost: 2000000,
                                     on_display: true,
-                                    libraries_id: 2)
+                                    library_id: 2)
   end
   
   describe "As a visitor" do
