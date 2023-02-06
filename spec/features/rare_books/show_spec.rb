@@ -20,12 +20,13 @@ RSpec.describe 'User Story 4, Child Show ' do
   describe "As a visitor" do
     describe "when I visit /rare_books/:id" do
       it "I see the rare_book with that ID with elements" do
-        visit "/rare_books"
+        visit "/rare_books/#{@rare_book_1.id}"
         expect(page).to have_content(@rare_book_1.title)
         expect(page).to have_content(@rare_book_1.cost)
         expect(page).to have_content(@rare_book_1.on_display)
         expect(page).to have_content(@rare_book_1.library.name)
 
+        visit "/rare_books/#{@rare_book_2.id}"
         expect(page).to have_content(@rare_book_2.title)
         expect(page).to have_content(@rare_book_2.cost)
         expect(page).to have_content(@rare_book_2.on_display)
