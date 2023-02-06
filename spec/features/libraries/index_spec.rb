@@ -30,8 +30,10 @@ RSpec.describe 'Libraries Index' do
         expect(@library_3.name).to appear_before(@library_1.name)
       end
 
-      xit 'next to each of the records I see when it was created' do
-
+      it 'next to each of the records I see when it was created' do
+        visit "/libraries"
+        expect(page).to have_content(@library_1.created_at)
+        expect(page).to have_content(@library_2.created_at) 
       end
     end
   end
