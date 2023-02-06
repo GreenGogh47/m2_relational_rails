@@ -22,12 +22,15 @@ RSpec.describe 'User Story 4, Child Show ' do
       it "I see the rare_book with that ID with elements" do
         visit "/rare_books"
         expect(page).to have_content(@rare_book_1.title)
+        expect(page).to have_content(@rare_book_1.cost)
+        expect(page).to have_content(@rare_book_1.on_display)
+        expect(page).to have_content(@rare_book_1.library.name)
+
         expect(page).to have_content(@rare_book_2.title)
+        expect(page).to have_content(@rare_book_2.cost)
+        expect(page).to have_content(@rare_book_2.on_display)
+        expect(page).to have_content(@rare_book_2.library.name)
       end
     end
-  end
-
-  xdescribe "#show" do
-    it ''
   end
 end

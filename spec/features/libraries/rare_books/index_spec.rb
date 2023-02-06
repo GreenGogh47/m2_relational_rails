@@ -16,19 +16,13 @@ RSpec.describe 'Parent Show ' do
                                                 cost: 2000000,
                                                 on_display: true)
   end
-  
-  describe "User Story 2 - As a visitor" do
-    describe "when I visit /libraries/:id" do
-      it "shows that library and all with the attributes" do
-        visit "/libraries/#{@library_1.id}"
-        expect(page).to have_content(@library_1.name)
-        expect(page).to have_content(@library_1.study_rooms)
-        expect(page).to have_content(@library_1.free_parking)
 
-        visit "/libraries/#{@library_2.id}"
-        expect(page).to have_content(@library_2.name)
-        expect(page).to have_content(@library_2.study_rooms)
-        expect(page).to have_content(@library_2.free_parking)
+  describe "User Story 5 - As a visitor" do
+    describe "when i visit /libraries/:id/rare_books" do
+      it "shows BOOKS (with attributes) associated with :id" do
+        visit "/libraries/#{@library_1.id}/rare_books"
+        # expect(page).to have_content(@library_1.name)
+        expect(page).to have_content(@rare_book_1.title)
       end
     end
   end

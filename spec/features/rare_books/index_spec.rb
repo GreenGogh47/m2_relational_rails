@@ -11,12 +11,10 @@ RSpec.describe 'User Story 3, Child Index' do
     
     @rare_book_1 = @library_1.rare_books.create!(title: "Witches and Sh-tuff",
                                     cost: 2345,
-                                    on_display: false,
-                                    library_id: 1)
+                                    on_display: false)
     @rare_book_2 = @library_2.rare_books.create!(title: "Shaving Hobbit Feet",
                                     cost: 2000000,
-                                    on_display: true,
-                                    library_id: 2)
+                                    on_display: true)
   end
   
   describe "As a visitor" do
