@@ -15,6 +15,9 @@ RSpec.describe 'Parent Show ' do
     @rare_book_2 = @library_2.rare_books.create!(title: "Shaving Hobbit Feet",
                                                 cost: 2000000,
                                                 on_display: true)
+    @rare_book_3 = @library_1.rare_books.create!(title: "Intro to Geomancy",
+                                                cost: 8765,
+                                                on_display: true)
   end
   
   describe "User Story 2 - As a visitor" do
@@ -29,6 +32,18 @@ RSpec.describe 'Parent Show ' do
         expect(page).to have_content(@library_2.name)
         expect(page).to have_content(@library_2.study_rooms)
         expect(page).to have_content(@library_2.free_parking)
+      end
+    end
+  end
+
+  describe "User Story 7, Parent Child Count" do
+    describe "As a visitor, visiting LIBRARY show page" do
+      it "show COUNT total BOOKS associated with this LIBRARY" do
+        visit "/libraries/#{@library_1.id}"
+        expect(page).to have_content(@library_1.rare_books.count)
+
+        visit "/libraries/#{@library_2.id}"
+        expect(page).to have_content(@library_2.rare_books.count)
       end
     end
   end
