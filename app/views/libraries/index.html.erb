@@ -2,5 +2,6 @@
 
 <% @libraries.each do |library| %>
   <b><%= link_to library.name, "/libraries/#{library.id}" %></b>
+  <p>Created at: <%= library.created_at %></p>
   <br>
 <% end %>
