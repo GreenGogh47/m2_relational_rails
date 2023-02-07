@@ -1,7 +1,10 @@
 <h1>All of the Libraries</h1>
+<a href="/libraries/new">Create New Library</a><br><br>
 
 <% @libraries.each do |library| %>
-  <b><%= link_to library.name, "/libraries/#{library.id}" %></b>
+  <h3><%= link_to library.name, "/libraries/#{library.id}" %></h3>
   <p>Created at: <%= library.created_at %></p>
   <br>
 <% end %>
+
+

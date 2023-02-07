@@ -1,7 +1,7 @@
 <h1>All of the Books</h1>
 
 <% @rare_books.each do |rare_book| %>
-  <b><%= link_to rare_book.title, "rare_books/#{rare_book.id}" %></b>
+  <h3><%= link_to rare_book.title, "rare_books/#{rare_book.id}" %></h3>
   <p>Cost: <%= rare_book.cost %></p>
   <p>On Display? <%= rare_book.on_display %></p>
   <p>Located at: <%= rare_book.library.name %></p>

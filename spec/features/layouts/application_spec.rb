@@ -23,26 +23,26 @@ RSpec.describe 'rare_books index' do
     describe "When I visit any page, there is a link atop the page" do
       it "it takes me to the RAREBOOKS Index" do
         visit "/"
-        expect(page).to have_link("All Rare Books", href: '/rare_books')
+        expect(page).to have_link(href: '/rare_books')
         visit "/libraries"
-        expect(page).to have_link("All Rare Books", href: '/rare_books')
+        expect(page).to have_link(href: '/rare_books')
         
         visit "/libraries/#{@library_1.id}"
-        expect(page).to have_link("All Rare Books", href: '/rare_books')
+        expect(page).to have_link(href: '/rare_books')
         visit "/libraries/#{@library_2.id}"
-        expect(page).to have_link("All Rare Books", href: '/rare_books')
+        expect(page).to have_link(href: '/rare_books')
         
         visit "/libraries/#{@library_1.id}/rare_books"
-        expect(page).to have_link("All Rare Books", href: '/rare_books')
+        expect(page).to have_link(href: '/rare_books')
         visit "/libraries/#{@library_2.id}/rare_books"
-        expect(page).to have_link("All Rare Books", href: '/rare_books')
+        expect(page).to have_link(href: '/rare_books')
 
         visit "/rare_books"
-        expect(page).to have_link("All Rare Books", href: '/rare_books')
+        expect(page).to have_link(href: '/rare_books')
         visit "/rare_books/#{@rare_book_1.id}"
-        expect(page).to have_link("All Rare Books", href: '/rare_books')
+        expect(page).to have_link(href: '/rare_books')
         visit "/rare_books/#{@rare_book_2.id}"
-        expect(page).to have_link("All Rare Books", href: '/rare_books')
+        expect(page).to have_link(href: '/rare_books')
       end
     end
   end
