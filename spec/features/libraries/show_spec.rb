@@ -47,4 +47,16 @@ RSpec.describe 'Parent Show ' do
       end
     end
   end
+
+  describe "User Story 10, Parent Child Index Link" do
+    describe "As a visitor, when I visit libraries/:id" do
+      it "shows a link to libaries/:id/rare_books" do
+        visit "/libraries/#{@library_1.id}"
+        expect(page).to have_link(href: "#{@library_1.id}/rare_books")
+
+        visit "/libraries/#{@library_2.id}"
+        expect(page).to have_link(href: "#{@library_2.id}/rare_books")
+      end
+    end
+  end
 end
