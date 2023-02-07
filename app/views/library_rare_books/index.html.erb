@@ -1,5 +1,5 @@
 <h1>Rare Books for <%= "#{@library.name}" %></h1>
-
+<a href= "/libraries/<%= "#{@library.id}" %>/rare_books/new">Create New Rare Book</a><br><br>
 
 <% @rare_books.each do |book| %>
   <h3>Title: <%= book.title  %></h3>
