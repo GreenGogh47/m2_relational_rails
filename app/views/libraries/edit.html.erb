@@ -1,0 +1,11 @@
+<h1>Edit <%= @library.name %></h1>
+
+<%= form_with url: "/libraries/#{@library.id}", method: :patch, local: :true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+  <%= form.label :study_rooms %>
+  <%= form.text_field :study_rooms %><br>
+  <%= form.label :free_parking %>
+  <%= form.text_field :free_parking %><br>
+  <%= form.submit "Submit Updates" %>
+<% end %>
