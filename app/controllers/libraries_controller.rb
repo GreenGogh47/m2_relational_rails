@@ -5,10 +5,21 @@ class LibrariesController < ApplicationController
   end
 
   def new
-    
+  end
+
+  def create
+    library = Library.create!(library_params)
+    library.save!
+    redirect_to "/libraries"
   end
 
   def show
     @library = Library.find(params[:id])
+  end
+
+  private
+
+  def library_params
+    params.permit(:name, :study_rooms, :free_parking)
   end
 end
