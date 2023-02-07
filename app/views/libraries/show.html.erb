@@ -3,3 +3,5 @@
 <p><%= link_to "Click here to see the rare books!", "#{@library.id}/rare_books" %></p>
 <p>Total Study Rooms: <%= @library.study_rooms %></p>
 <p>Is there free parking? <%= @library.free_parking %></p>
+
+<p><%= link_to "Update Library", "/libraries/#{@library.id}/edit" %></p>
