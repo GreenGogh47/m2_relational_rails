@@ -4,6 +4,10 @@ class LibrariesController < ApplicationController
     @libraries = Library.all.sort_by { |book| book.created_at }.reverse
   end
 
+  def new
+    
+  end
+
   def show
     @library = Library.find(params[:id])
   end

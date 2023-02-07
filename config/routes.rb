@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
   
   get '/libraries', to: 'libraries#index'
+  get '/libraries/new', to: 'libraries#new'
   get '/libraries/:id', to: 'libraries#show'
   get '/libraries/:id/rare_books', to: 'library_rare_books#index'
   
