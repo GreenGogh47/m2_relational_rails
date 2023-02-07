@@ -1,7 +1,7 @@
 class RareBooksController < ApplicationController
 
   def index
-    @rare_books = RareBook.all
+    @rare_books = RareBook.where(on_display: true)
   end
 
   def show

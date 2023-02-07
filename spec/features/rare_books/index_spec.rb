@@ -17,11 +17,23 @@ RSpec.describe 'rare_books index' do
                                     on_display: true)
   end
   
-  describe "User Story 3, Child Index, As a visitor" do
+  #  THIS TEST IS OBSOLETE AFTER THE ADDITION OF USER STORY 15 BELOW
+  # THE INDEX WILL ONLY SHOW RARE BOOKS THAT ARE ON DISPLAY, NOT ALL BOOKS
+  # describe "User Story 3, Child Index, As a visitor" do
+  #   describe "when I visit /rare_books" do
+  #     it "shows the title of each book" do
+  #       visit "/rare_books"
+  #       expect(page).to have_content(@rare_book_1.title)
+  #       expect(page).to have_content(@rare_book_2.title)
+  #     end
+  #   end
+  # end
+
+  describe "User Story 15, Child Index only shows `true` Records, as a visitor" do
     describe "when I visit /rare_books" do
-      it "shows the title of each book" do
+      it "only shows books that ON_DISPLAY is true" do
         visit "/rare_books"
-        expect(page).to have_content(@rare_book_1.title)
+        expect(page).to have_no_content(@rare_book_1.title)
         expect(page).to have_content(@rare_book_2.title)
       end
     end
