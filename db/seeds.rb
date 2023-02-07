@@ -52,19 +52,19 @@
                             on_display: true)
 
 # SW books
-@rare_book_9 = @library_2.rare_books.create!(
+@rare_book_9 = @library_3.rare_books.create!(
                             title: "Yoda's Journal",
                             cost: 908345,
                             on_display: false)
-@rare_book_10 = @library_2.rare_books.create!(
+@rare_book_10 = @library_3.rare_books.create!(
                             title: "The Rammahgon",
                             cost: 3933334,
                             on_display: true)
-@rare_book_11 = @library_2.rare_books.create!(
+@rare_book_11 = @library_3.rare_books.create!(
                             title: "The Aionomica Volume 1",
                             cost: 342457,
                             on_display: false)
-@rare_book_12 = @library_2.rare_books.create!(
+@rare_book_12 = @library_3.rare_books.create!(
                             title: "Meditations on Meditations",
                             cost: 9872345,
                             on_display: true)
