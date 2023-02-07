@@ -6,10 +6,14 @@ Rails.application.routes.draw do
   get '/libraries', to: 'libraries#index'
   get '/libraries/new', to: 'libraries#new'
   post '/libraries', to: 'libraries#create'
+  
   get '/libraries/:id', to: 'libraries#show'
   patch '/libraries/:id', to: 'libraries#update'
   get '/libraries/:id/edit', to: 'libraries#edit'
+
   get '/libraries/:id/rare_books', to: 'library_rare_books#index'
+  get '/libraries/:id/rare_books/new', to: 'library_rare_books#new'
+  post '/libraries/:id/rare_books', to: 'library_rare_books#create'
   
   get '/rare_books', to: 'rare_books#index'
   get '/rare_books/:id', to: 'rare_books#show'
