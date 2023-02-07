@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'User Story 3, Child Index' do
+RSpec.describe 'rare_books index' do
   before(:each) do
     @library_1 = Library.create!(name: "Hogwarts",
                                 study_rooms: 321,
@@ -17,7 +17,7 @@ RSpec.describe 'User Story 3, Child Index' do
                                     on_display: true)
   end
   
-  describe "As a visitor" do
+  describe "User Story 3, Child Index, As a visitor" do
     describe "when I visit /rare_books" do
       it "shows the title of each book" do
         visit "/rare_books"
