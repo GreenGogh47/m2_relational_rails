@@ -45,6 +45,7 @@ group :development, :test do
   gem 'launchy'
   gem 'orderly'
   gem 'shoulda-matchers'
+  gem 'net-http'
 end
 
 group :development do
